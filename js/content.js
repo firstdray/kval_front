@@ -12,8 +12,6 @@ async function getRequest() {
         if (res.ok) {
             requests = result.data
             displayRequests(requests)
-        } else {
-            alert(result.error)
         }
     } catch (error) {
         console.log(error)
