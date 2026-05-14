@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function getRequestAll() {
     try {
-        const res = await fetch(`http://localhost:3000/request/all`, {
+        const res = await fetch(`https://kval-backend.onrender.com/request/all`, {
             method: 'GET',
         });
 
@@ -140,9 +140,7 @@ async function getRequestAll() {
         if (res.ok) {
             requests = result.data
             displayRequests(requests)
-        } else {
-            alert(result.error)
-        }
+        } 
     } catch (error) {
         console.log(error)
         alert("ошибка с сервера")
