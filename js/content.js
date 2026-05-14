@@ -29,7 +29,6 @@ function displayRequests(requests) {
 
     tbody.innerHTML = requests.map(request => `
         <tr>
-         <tr><th>Курс</th><th>Дата начала</th><th>Оплата</th><th>Статус</th><th>Дата подачи</th><th>Отзыв</th></tr>
             <td>${escapeHtml(request.name_course)}</td>
             <td>${request.end_date.split('T')[0]}</td>
             <td>${request.type_pay || 'Не указано'}</td>
